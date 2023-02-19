@@ -1,0 +1,27 @@
+@mixin centrar-elemento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin sombra($color){
+    box-shadow: $color 0px 3px 8px;
+}
+.social{
+    @include centrar-elemento;
+    width: 100%;
+    height: 300px;
+    button {
+        @include centrar-elemento;
+        height: 50px;
+        width: 200px;
+        &.fb{
+            @include sombra(#0081B4);
+        }
+        &.ins{
+            @include sombra(#EFA3C8);
+        }
+        &.tw{
+            @include sombra(#1f1f1f);
+        }
+    }
+} 
